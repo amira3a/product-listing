@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@use 'bootstrap/scss/bootstrap';
+
+// Define light mode variables
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --card-bg: #b1b3b4;
+  --button-bg: #007BFF;
+  --button-text: #ffffff;
+  --cart-bg: #ffffff;
+}
+
+// Define dark mode variables
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-bg: #333;
+  --button-bg: #ff9800;
+  --button-text: #000;
+  --cart-bg: #222;
+}
+
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.cart-summary,
+.cart-items,
+.cart-item {
+  background-color: var(--cart-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
