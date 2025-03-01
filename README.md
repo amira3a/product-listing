@@ -1,59 +1,109 @@
-# ProductListing
+# 🛍️ Product Listing & Shopping Cart Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+## 📌 Overview
+This is a modern **Angular-based e-commerce product listing application** with features like **category filtering, a shopping cart, a product details modal, and a dark mode toggle**. 
 
-## Development server
+### 🔥 Features
+- 🛒 **Shopping Cart**: Add and remove products with a real-time cart summary.
+- 🎨 **Product Filtering**: Filter products by category.
+- 🔍 **Product Modal**: Click on a product to view more details.
+- 🌙 **Dark Mode**: Toggle between light and dark themes.
+- ⚡ **Smooth Animations**: Stylish hover effects and fade-in transitions.
+- 📱 **Responsive Design**: Works on desktop and mobile screens.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Getting Started
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 📦 Installation
 
-## Code scaffolding
+1️⃣ **Clone the repository:**
+git clone https://github.com/amira3a/product-listing.git
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2️⃣ Navigate to the project folder:
+cd product-listing
 
-```bash
-ng generate component component-name
-```
+3️⃣ Install dependencies:
+npm install
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4️⃣ Run the development server:
+ng serve --open
 
-```bash
-ng generate --help
-```
 
-## Building
+🏗️ Project Structure
 
-To build the project run:
+product-listing/
+│── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── product-list/
+│   │   │   ├── product-detail-modal/
+│   │   │   ├── cart/
+│   │   ├── services/
+│   │   │   ├── product.service.ts
+│   │   │   ├── cart.service.ts
+│   │   ├── models/
+│   │   │   ├── product.model.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│── assets/
+│── styles.scss
+│── angular.json
+│── package.json
+│── README.md
 
-```bash
-ng build
-```
+⚙️ Technologies Used
+Angular: Frontend framework
+TypeScript: Strongly-typed JavaScript
+SCSS: Advanced styling
+NgBootstrap: UI components (modals, buttons)
+RxJS: Reactive state management
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+🛠️ Usage
+1️⃣ Adding a Product to Cart
+Click the "Add to Cart" button on any product.
+The cart updates dynamically in the header.
 
-## Running unit tests
+2️⃣ Removing a Product from Cart
+Click the "Remove" button inside the cart.
+🛑 Each click removes only one instance of the product.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+3️⃣ Filtering Products by Category
+Select a category from the dropdown.
+The list updates to show only matching products.
 
-```bash
-ng test
-```
+4️⃣ Viewing Product Details
+Click on a product card to open a modal with more details.
 
-## Running end-to-end tests
+5️⃣ Dark Mode Toggle
+Click the 🌙 Dark Mode Toggle Button in the header.
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
+🐞 Troubleshooting
+Issue: Filtering is not working properly
+🔹 Solution: Ensure filteredProducts is used in ngFor inside product-list.component.html.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Issue: Images not loading
+🔹 Solution: Check if image URLs in product.service.ts are accessible.
 
-## Additional Resources
+Issue: Dark mode does not update the cart
+🔹 Solution: Ensure .cart-summary and .cart-item have styles using var(--bg-color).
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+🏆 Future Improvements
+✅ Add pagination for large product lists.
+✅ Implement user authentication for personalized shopping.
+✅ Store the cart in localStorage so it persists after refresh.
+
+
+🤝 Contributing
+We welcome contributions! 🚀
+
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Commit your changes (git commit -m "Added a new feature").
+Push to your branch (git push origin feature-name).
+Open a Pull Request. 🎉
+
+
+🔹 Built with ❤️ using Angular, TypeScript & SCSS 🔹
